@@ -199,6 +199,117 @@ const BUILTIN_RECIPES = [
       'Bake for 1 hour at 350 degrees, or smoke for 2 hours.',
     ],
   },
+  {
+    id: 'turkey-taco-sweet-potatoes',
+    custom: false,
+    title: 'Turkey Taco Stuffed Sweet Potatoes',
+    source: "Cookin' Canuck",
+    description:
+      'A 20-minute weeknight dinner: taco-spiced ground turkey simmered with crushed tomatoes, spooned over cumin-mashed sweet potato in its own skin and broiled with pepper Jack.',
+    accent: 'ochre',
+    // Cookin' Canuck publishes a per-serving figure (226 kcal at 4 servings)
+    // rather than a per-ingredient breakdown, so this uses meta.kcalPerServing.
+    // The BigOven app's "485" number is a different basis -- it treats the
+    // whole recipe as one serving and counts only 10 of 13 ingredients -- so
+    // it is deliberately not used here.
+    meta: { prep: '10 min', cook: '10 min', serves: 4, kcalPerServing: 226 },
+    tags: ['Mexican', 'Weeknight', 'Gluten-free'],
+    ingredients: [
+      { qty: 2, unit: '', name: 'medium sweet potatoes' },
+      { qty: 1, unit: 'tsp', name: 'olive oil' },
+      { qty: 1.25, unit: 'tsp', name: 'ground cumin, divided' },
+      { qty: 0.375, unit: 'tsp', name: 'salt, divided' },
+      { qty: 0.375, unit: 'tsp', name: 'ground pepper, divided' },
+      { qty: 0.75, unit: 'lb', name: 'lean (93%) ground turkey' },
+      { qty: 4, unit: '', name: 'garlic cloves, minced' },
+      { qty: 1, unit: 'tsp', name: 'chili powder' },
+      { qty: 0.5, unit: 'tsp', name: 'dried oregano' },
+      { qty: 0.5, unit: 'tsp', name: 'paprika' },
+      { qty: 1.25, unit: 'cup', name: 'canned crushed tomatoes' },
+      { qty: 0.25, unit: 'cup', name: 'grated pepper Jack cheese' },
+      { qty: 2, unit: 'tbsp', name: 'minced flat-leaf parsley' },
+    ],
+    steps: [
+      'Pierce the sweet potatoes all over with a fork. Microwave on HIGH until tender when pierced, 4 to 5 minutes per side. Let them rest until cool enough to handle.',
+      'Cut the potatoes in half lengthwise. Scoop the flesh into a medium bowl and reserve the skins. Mash the flesh with the back of a fork until most lumps are gone, then stir in the olive oil, \u00BD tsp of the cumin, \u00BC tsp of the salt, and \u00BC tsp of the pepper. Divide the mashed sweet potato evenly back into the skins and set them on a baking sheet.',
+      'Heat a large nonstick skillet over medium-high heat and lightly coat with cooking spray. Add the ground turkey and cook, breaking it up with a wooden spoon, until cooked through. Stir in the garlic, chili powder, the remaining \u00BE tsp cumin, oregano, paprika, and the remaining \u215B tsp each of salt and pepper. Cook 1 minute, then stir in the crushed tomatoes.',
+      'Preheat the broiler. Spoon the turkey mixture into each sweet potato skin and top each with 1 tbsp grated cheese. Broil until the cheese melts, about 30 seconds. Garnish with parsley and serve.',
+    ],
+  },
+  {
+    id: 'smoked-mac-and-cheese',
+    custom: false,
+    title: 'Smoked Mac and Cheese',
+    source: 'cjgramlich',
+    description:
+      'A rich three-cheese macaroni - Colby Jack, Muenster, and cream cheese over a milk and evaporated-milk base - smoked low on a pellet grill, then finished hot until the top browns.',
+    accent: 'plum',
+    // Per-serving figure from the source recipe (8 servings); no
+    // per-ingredient breakdown, so this uses meta.kcalPerServing.
+    meta: { prep: '20 min', cook: '1 hr 50 min', serves: 8, kcalPerServing: 802 },
+    tags: ['Smoker', 'Side', 'Comfort food'],
+    ingredients: [
+      { qty: 16, unit: 'oz', name: 'elbow macaroni noodles (1 box)' },
+      { qty: 2.5, unit: 'cup', name: 'whole milk' },
+      { qty: 12, unit: 'oz', name: 'evaporated milk (1 can)' },
+      { qty: 0.5, unit: 'cup', name: 'unsalted butter, cubed (1 stick)' },
+      { qty: 8, unit: 'oz', name: 'cream cheese, cubed' },
+      { qty: 16, unit: 'oz', name: 'Colby Jack cheese, shredded' },
+      { qty: 8, unit: 'oz', name: 'Muenster cheese, shredded' },
+      { qty: 2, unit: 'tsp', name: 'kosher salt' },
+      { qty: 2, unit: 'tsp', name: 'ground mustard (dry spice)' },
+      { qty: 0.5, unit: 'tsp', name: 'ground black pepper' },
+    ],
+    steps: [
+      'Boil the pasta in salted water according to the package, then drain and rinse in cold water to stop the cooking process.',
+      'Start your pellet grill and set the temperature to 180 degrees F. Any pellets can be used; oak pellets were used here.',
+      'In a large bowl, combine the cooked pasta, whole milk, evaporated milk, cubed butter, cubed cream cheese, and the Muenster and Colby Jack cheeses. Reserve a little cheese for topping.',
+      'Sprinkle the seasonings on top and mix in well.',
+      'Lightly spray a square foil pan with cooking spray and transfer the mac and cheese to the pan.',
+      'Place the pan on the pellet grill and smoke for 30-45 minutes, depending on how smoky you want the cheese to be.',
+      'Stir to blend the melted mac and cheese, then sprinkle the reserved cheese on top.',
+      'Cover with foil.',
+      'Increase the temperature to 400 degrees F and cook until the sauce is thickened, about 20-30 minutes. Remove the foil and cook for an additional 10-15 minutes, until the top is browned.',
+      'Remove from the smoker and let rest for 10 minutes before serving.',
+      'Store leftovers in the fridge.',
+    ],
+  },
+  {
+    id: 'smoked-mashed-potatoes',
+    custom: false,
+    title: 'Smoked Mashed Potatoes',
+    source: 'cjgramlich',
+    description:
+      'Yukon golds mashed with butter, heavy cream, and sour cream, spread in a cast iron skillet and smoked on the pellet grill until bubbly and browned. Finish with bacon, shredded cheese, and green onions to taste.',
+    accent: 'indigo',
+    // Per-serving figure from the source recipe (6 servings); no
+    // per-ingredient breakdown, so this uses meta.kcalPerServing.
+    meta: { prep: '25 min', cook: '1 hr 25 min', serves: 6, kcalPerServing: 760 },
+    tags: ['Smoker', 'Side', 'Holiday'],
+    ingredients: [
+      { qty: 3, unit: 'lb', name: 'Yukon gold potatoes, unpeeled, washed and cut' },
+      { qty: 1, unit: 'tbsp', name: 'coarse kosher salt' },
+      { qty: 1, unit: 'cup', name: 'butter, softened' },
+      { qty: 0.5, unit: 'cup', name: 'heavy cream' },
+      { qty: 0.5, unit: 'cup', name: 'sour cream' },
+      { qty: 6, unit: 'oz', name: 'bacon pieces (or to taste)' },
+      { qty: null, unit: '', name: 'salt and pepper, to taste' },
+      { qty: 8, unit: 'oz', name: 'shredded cheese' },
+      { qty: 4, unit: 'oz', name: 'green onions (or to taste)' },
+    ],
+    steps: [
+      'Wash and cut the potatoes if needed. Add the potatoes to a large saucepan and cover with water and 1 tbsp salt.',
+      'Boil the potatoes until fork-tender over medium-high heat, about 15-20 minutes.',
+      'Drain the water and place the potatoes in a large mixing bowl.',
+      'Mash them until you reach your desired consistency.',
+      'Add the butter, heavy cream, and sour cream, and fold into the mashed potatoes.',
+      'Add salt and pepper to taste.',
+      'Transfer the potatoes to a cast iron skillet and spread evenly.',
+      'Preheat the pellet grill to 225 degrees F.',
+      'Smoke for 30-45 minutes, then increase the temperature to 350 degrees F and smoke for an additional 20-30 minutes, or until bubbly and browned.',
+      'Serve warm.',
+    ],
+  },
 ];
 
 /* ============================================================
@@ -250,13 +361,17 @@ function formatQty(n) {
   if (n == null) return '';
   const whole = Math.floor(n + 1e-9);
   const frac = n - whole;
+  // Ascending order matters: the loop below breaks on the first match,
+  // so neighboring fractions must be listed low-to-high.
   const fracMap = [
-    [0.125, '\u215B'], [0.25, '\u00BC'], [0.333, '\u2153'],
-    [0.5, '\u00BD'], [0.667, '\u2154'], [0.75, '\u00BE'], [0.875, '\u215E'],
+    [0.125, '\u215B'], [0.25, '\u00BC'], [0.333, '\u2153'], [0.375, '\u215C'],
+    [0.5, '\u00BD'], [0.625, '\u215D'], [0.667, '\u2154'], [0.75, '\u00BE'], [0.875, '\u215E'],
   ];
   let fracStr = '';
   for (const [v, s] of fracMap) {
-    if (Math.abs(frac - v) < 0.045) { fracStr = s; break; }
+    // 0.03 tolerance: 1/3 (.333) and 3/8 (.375) are only .042 apart, so a
+    // looser window would let 3/8 wrongly snap to 1/3. Keep it tight.
+    if (Math.abs(frac - v) < 0.03) { fracStr = s; break; }
   }
   if (!fracStr) {
     if (frac < 0.045) return String(whole);
