@@ -310,6 +310,97 @@ const BUILTIN_RECIPES = [
       'Serve warm.',
     ],
   },
+  {
+    id: 'baked-parmesan-mashed-potatoes',
+    custom: false,
+    title: 'Baked Mashed Potatoes with Parmesan Cheese and Bread Crumbs',
+    source: 'Food Network',
+    description:
+      'Russet potatoes mashed with whole milk and butter, folded with mozzarella and Parmesan, topped with a Parmesan-bread crumb crust and baked until golden. Can be assembled up to 6 hours ahead.',
+    accent: 'ochre',
+    // The source app imported this with a serving count of 1, which made
+    // its per-serving calories (3163) the whole-pan total. A 13x9 dish
+    // from 4 lb of potatoes is a standard 8-serving side, so serves is set
+    // to 8 and kcalPerServing is the whole-pan figure divided by 8 (~395).
+    meta: { prep: '30 min', cook: '45 min', serves: 8, kcalPerServing: 395 },
+    tags: ['Side', 'Holiday', 'Make-ahead'],
+    ingredients: [
+      { qty: 1, unit: 'tbsp', name: 'butter (for the dish)' },
+      { qty: 4, unit: 'lb', name: 'russet potatoes, peeled, cut into 1-inch pieces' },
+      { qty: 1, unit: 'cup', name: 'whole milk' },
+      { qty: 0.5, unit: 'cup', name: 'butter, melted (1 stick)' },
+      { qty: 1.5, unit: 'cup', name: 'grated mozzarella' },
+      { qty: 1, unit: 'cup', name: 'freshly grated Parmesan' },
+      { qty: null, unit: '', name: 'salt and freshly ground black pepper' },
+      { qty: 2, unit: 'tbsp', name: 'plain dry bread crumbs' },
+    ],
+    steps: [
+      'Preheat the oven to 400 degrees F. Coat a 13 by 9 by 2-inch baking dish with 1 tbsp of butter and set aside.',
+      'Cook the potatoes in a large pot of boiling salted water until very tender, about 15 minutes. Drain, return the potatoes to the same pot, and mash well. Mix in the milk and melted butter, then mix in the mozzarella and 3/4 cup of the Parmesan. Season to taste with salt and pepper. Transfer the potatoes to the prepared baking dish. Stir the bread crumbs and the remaining 1/4 cup Parmesan together in a small bowl, then sprinkle over the mashed potatoes. The recipe can be prepared to this point up to 6 hours ahead; cover and chill.',
+      'Bake, uncovered, until the topping is golden brown, about 20 minutes.',
+    ],
+  },
+  {
+    id: 'grand-marnier-truffles',
+    custom: false,
+    title: 'Grand Marnier Chocolate Truffles',
+    source: 'asyaver',
+    description:
+      'Dark chocolate ganache spiked with Grand Marnier, chilled, rolled into 1-inch balls and dusted with unsweetened cocoa. Make-ahead, with mocha and hazelnut variations.',
+    accent: 'plum',
+    // Per-serving figure from the source recipe; serves count (96) and the
+    // 15 kcal/serving are internally consistent (a ~1,440 kcal batch).
+    meta: { prep: '40 min', cook: '2 hr', serves: 96, kcalPerServing: 15 },
+    tags: ['Dessert', 'Chocolate', 'Make-ahead'],
+    ingredients: [
+      { qty: 0.25, unit: 'cup', name: 'heavy cream' },
+      { qty: 2, unit: 'tbsp', name: 'Grand Marnier' },
+      { qty: 6, unit: 'oz', name: 'best-quality chocolate' },
+      { qty: 4, unit: 'tbsp', name: 'butter, softened' },
+      { qty: null, unit: '', name: 'unsweetened cocoa powder, for rolling' },
+    ],
+    steps: [
+      'Boil the cream in a heavy pan until reduced by half. Remove from heat, stir in the Grand Marnier and chocolate, and return to low heat; stir until the chocolate melts.',
+      'Whisk in the softened butter. When the mixture is smooth, pour it into a shallow bowl and refrigerate until firm, about 40 minutes.',
+      'Scoop the chocolate up with a teaspoon and shape into rough 1-inch balls. Roll the balls in the unsweetened cocoa.',
+      'Store the truffles covered in the refrigerator. Let them stand at room temperature for 30 minutes before serving.',
+      'Variations - Mocha: substitute espresso and a pinch of freshly ground coffee for the Grand Marnier. Hazelnut: substitute Frangelico for the Grand Marnier and roll the truffles in chopped hazelnuts instead of cocoa.',
+    ],
+  },
+  {
+    id: 'asian-glazed-drumsticks',
+    custom: false,
+    title: 'Asian Glazed Drumsticks',
+    source: 'aldrichmh',
+    description:
+      'Skinless drumsticks browned, then simmered and reduced in a balsamic-soy glaze with garlic, ginger, and Sriracha until thick and glossy. Finished with chives and sesame seeds.',
+    accent: 'clay',
+    // Per-serving figure from the source recipe (4 servings). The source
+    // listed cook time as "10 hrs 35 min", which does not match the steps
+    // (no marination); cook is set to the ~40 min the steps actually take.
+    meta: { prep: '10 min', cook: '40 min', serves: 4, kcalPerServing: 605 },
+    tags: ['Asian', 'Chicken', 'Weeknight'],
+    ingredients: [
+      { qty: 8, unit: '', name: 'medium chicken drumsticks, skin removed' },
+      { qty: null, unit: '', name: 'olive oil spray' },
+      { qty: 1, unit: 'cup', name: 'water' },
+      { qty: 1, unit: 'tbsp', name: 'Sriracha hot sauce (more or less to taste)' },
+      { qty: 0.5, unit: 'cup', name: 'balsamic vinegar' },
+      { qty: 0.5, unit: 'cup', name: 'soy sauce' },
+      { qty: 4, unit: 'tsp', name: 'agave nectar (or sugar)' },
+      { qty: 3, unit: '', name: 'garlic cloves, crushed' },
+      { qty: 1, unit: 'tsp', name: 'ginger, grated' },
+      { qty: 2, unit: 'tbsp', name: 'chives or scallions, chopped' },
+      { qty: 1, unit: 'tsp', name: 'sesame seeds' },
+    ],
+    steps: [
+      'In a heavy large saucepan, brown the chicken on high for 3-4 minutes with a little spray oil.',
+      'Add the water, balsamic vinegar, soy sauce, agave, garlic, ginger, and hot sauce. Cook on high until the liquid comes to a boil.',
+      'Reduce the heat to low and simmer, covered, for about 20 minutes.',
+      "Remove the cover and bring the heat to high, letting the sauce reduce, about 8-10 minutes, until it becomes a thick glaze; turn the chicken occasionally. Keep an eye on it - you don't want the glaze to burn once it starts to thicken.",
+      'Transfer the chicken to a platter and pour the glaze on top. Top with chives and sesame seeds, and serve.',
+    ],
+  },
 ];
 
 /* ============================================================
